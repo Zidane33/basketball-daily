@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import ReactDOM from 'react-dom';
 import './App.css';
+import { data } from './data/outputType.js'
 
-function App() {
+function Test(props){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {data[0]['assists']}
     </div>
-  );
+  )
 }
 
-export default App;
+ReactDOM.render(<Test />, document.getElementById('root'))
+
+export default Test;
